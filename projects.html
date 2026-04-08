@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Projects | Loid Forger – Full Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-soft-black: #0a0a0a;
+      --primary-green: #00ff88;
+      --primary-soft-green: #00cc66;
+      --text-off-white: #f5f5f5;
+      --text-gray: #b0b0b0;
+      --border-color: #2a2a2a;
+      --gradient-green: linear-gradient(135deg, #00ff88, #00cc66);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg-soft-black);
+      color: var(--text-gray);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      text-align: center;
+      color: var(--text-off-white);
+      margin-bottom: 0.5rem;
+    }
+    h1 span { color: var(--primary-green); }
+    .sub {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0,255,136,0.15);
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      color: var(--primary-green);
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: 0.2s;
+      border: 1px solid rgba(0,255,136,0.3);
+    }
+    .back-link:hover {
+      background: var(--primary-green);
+      color: #0a0a0a;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background: rgba(30,30,30,0.6);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--primary-green);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+    }
+    .preview-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #111;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .card-content {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-content h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.3rem;
+      color: var(--primary-soft-green);
+      margin-bottom: 0.5rem;
+    }
+    .card-content p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+    .card-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+    .card-links a {
+      text-decoration: none;
+      background: var(--gradient-green);
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #0a0a0a;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: 0.2s;
+    }
+    .card-links a:last-child {
+      background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+      color: white;
+    }
+    .card-links a:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+    .loader {
+      text-align: center;
+      padding: 3rem;
+      font-size: 1.2rem;
+    }
+    .error-message {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255,0,0,0.1);
+      border-radius: 20px;
+      margin: 2rem;
+    }
+    .retry-btn {
+      background: rgba(0,255,136,0.2);
+      border: 1px solid var(--primary-green);
+      color: var(--primary-green);
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1.5rem;
+      border-top: 1px solid rgba(0,255,136,0.2);
+    }
+    .stats-badge {
+      display: inline-block;
+      background: rgba(0,255,136,0.15);
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 700px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  <h1>📁 <span>All Projects</span></h1>
+  <div class="sub">Live demos from my GitHub — every repository with a working preview</div>
+  
+  <div id="projectsContainer" class="projects-grid">
+    <div class="loader"><i class="fas fa-spinner fa-pulse"></i> Fetching all projects from GitHub...</div>
+  </div>
+  <footer>
+    <p>© <span id="year"></span> Loid Forger — Full stack & Web3 developer</p>
+  </footer>
+</div>
+
+<script>
+  (function() {
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const GITHUB_USER = 'LoidForger-dev';
+    const container = document.getElementById('projectsContainer');
+    const CACHE_KEY = 'loid_all_projects';
+    const CACHE_TIME_KEY = 'loid_all_cache_time';
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function displayProjects(repos, isCached = false) {
+      if (!repos || repos.length === 0) {
+        container.innerHTML = `<div class="error-message">
+          <i class="fas fa-folder-open" style="font-size:2rem;"></i>
+          <p>No projects with live demos found on GitHub.</p>
+          <a href="https://github.com/${GITHUB_USER}" target="_blank" style="color:var(--primary-green);">Visit my GitHub →</a>
+        </div>`;
+        return;
+      }
+      
+      container.innerHTML = '';
+      repos.forEach(repo => {
+        const card = document.createElement('article');
+        card.className = 'card';
+        const screenshotUrl = `https://api.microlink.io/?url=${encodeURIComponent(repo.homepage)}&screenshot=true&meta=false&embed=screenshot.url&type=jpeg&waitUntil=networkidle2&force=true&ttl=86400`;
+        const fallbackSvg = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%230a0a0a'/%3E%3Ctext x='50%25' y='50%25' font-size='22' fill='%2300ff88' font-family='Orbitron' text-anchor='middle' dy='.3em'%3E${repo.name}%3C/text%3E%3C/svg%3E`;
+        
+        card.innerHTML = `
+          <img class="preview-img" src="${screenshotUrl}" alt="${repo.name} preview" loading="lazy" onerror="this.onerror=null; this.src='${fallbackSvg}';">
+          <div class="card-content">
+            <h3>${escapeHtml(repo.name)}</h3>
+            <p>${escapeHtml(repo.description ? repo.description.slice(0, 120) : 'Professional Web3 / full-stack project with live demo.')}</p>
+            <div class="card-links">
+              <a href="${repo.homepage}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="${repo.html_url}" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source Code</a>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+      
+      if (isCached) {
+        const note = document.createElement('div');
+        note.style.gridColumn = '1/-1';
+        note.style.textAlign = 'center';
+        note.style.marginTop = '1rem';
+        note.style.fontSize = '0.85rem';
+        note.innerHTML = `<i class="fas fa-database"></i> Showing cached projects (GitHub API rate limit active). 
+          <button class="retry-btn" id="retryFetchBtn"><i class="fas fa-sync-alt"></i> Retry fresh fetch</button>`;
+        container.appendChild(note);
+        document.getElementById('retryFetchBtn')?.addEventListener('click', () => fetchAllProjects(true));
+      } else {
+        const footerNote = document.createElement('p');
+        footerNote.style.gridColumn = '1/-1';
+        footerNote.style.textAlign = 'center';
+        footerNote.style.marginTop = '1.5rem';
+        footerNote.style.fontSize = '0.9rem';
+        footerNote.innerHTML = `✅ Showing ${repos.length} project${repos.length !== 1 ? 's' : ''} with live demos — directly from GitHub.`;
+        container.appendChild(footerNote);
+      }
+    }
+
+    async function fetchAllProjects(forceRefresh = false) {
+      try {
+        container.innerHTML = '<div class="loader"><i class="fas fa-spinner fa-pulse"></i> Loading latest projects from GitHub...</div>';
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updated`);
+        if (!response.ok) {
+          if (response.status === 403 || response.status === 429) throw new Error('RATE_LIMIT');
+          throw new Error(`HTTP ${response.status}`);
+        }
+        const repos = await response.json();
+        // Filter only repos with a valid homepage and not archived
+        const withHomepage = repos.filter(r => r.homepage && r.homepage.trim() !== '' && !r.archived);
+        if (withHomepage.length === 0) throw new Error('NO_PROJECTS');
+        
+        // Cache for future visits
+        localStorage.setItem(CACHE_KEY, JSON.stringify(withHomepage));
+        localStorage.setItem(CACHE_TIME_KEY, Date.now().toString());
+        displayProjects(withHomepage, false);
+      } catch (err) {
+        const cached = localStorage.getItem(CACHE_KEY);
+        if (cached) {
+          const cachedRepos = JSON.parse(cached);
+          displayProjects(cachedRepos, true);
+        } else {
+          container.innerHTML = `
+            <div class="error-message">
+              <i class="fas fa-exclamation-triangle" style="font-size:2rem; color:#ff5555;"></i>
+              <p>GitHub API rate limit reached or network issue.</p>
+              <p>You can still see my work directly on <a href="https://github.com/${GITHUB_USER}" target="_blank" style="color:var(--primary-green);">GitHub</a>.</p>
+              <button class="retry-btn" id="forceRetry"><i class="fas fa-redo-alt"></i> Try Again</button>
+            </div>
+          `;
+          document.getElementById('forceRetry')?.addEventListener('click', () => fetchAllProjects(true));
+        }
+      }
+    }
+
+    fetchAllProjects();
+  })();
+</script>
+</body>
+</html>
