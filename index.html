@@ -1,519 +1,325 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="https://schema.org/Person">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Loid Forger | Full-stack developer specializing in frontend, backend, and Web3 development. 50+ happy clients, 5-star rated." />
-  <meta name="keywords" content="full-stack developer, web3 developer, frontend developer, backend developer, JavaScript, React, Node.js, blockchain developer, portfolio, contact" />
-  <meta name="author" content="Loid Forger" />
-  <meta name="robots" content="index, follow" />
-  
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Loid Forger — Frontend, Backend & Web3 Developer | 50+ Happy Clients" />
-  <meta property="og:description" content="Full-stack developer with 5-star ratings and 50+ successful projects. Specializing in modern web development and Web3 technologies." />
-  <meta property="og:image" content="https://loidforgerportfolio.netlify.app/loidforger-og.jpg" />
-  <meta property="og:url" content="https://loidforgerportfolio.netlify.app/" />
-  
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Loid Forger — Frontend, Backend & Web3 Developer | 50+ Happy Clients" />
-  <meta name="twitter:description" content="Full-stack developer creating clean interfaces and reliable systems with modern technologies. 5-star rated, 24hr delivery." />
-  <meta name="twitter:image" content="https://loidforgerportfolio.netlify.app/loidforger-twitter.jpg" />
-  
-  <title>Loid Forger — 5-Star Web3 & Full-Stack Developer | 50+ Happy Clients</title>
-  <link rel="canonical" href="https://loidforgerportfolio.netlify.app/" />
-  
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" as="style" />
+  <title>Loid Forger — 5-Star Web3 & Full-Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%2300ff88'>LF</text></svg>">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Rajdhani:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
   <style>
     :root {
-      --bg-white: #ffffff;
-      --card-bg: rgba(255, 255, 255, 0.92);
-      --primary-green: #00cc66;
-      --primary-soft-green: #00994d;
-      --primary-glow: rgba(0, 204, 102, 0.2);
-      --secondary-teal: #00b894;
-      --text-dark: #0a1a2f;
-      --text-muted: #2c3e50;
-      --border-light: #e2e8f0;
-      --shadow-sm: 0 8px 20px -6px rgba(0, 0, 0, 0.05);
-      --shadow-hover: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
-      --content-width: min(1200px, 90vw);
-      --gradient-green: linear-gradient(135deg, #00cc66, #00994d);
+      --emerald: #0F3D3E; --emerald-light: #1a5455; --emerald-dark: #082728;
+      --crimson: #A61B2B; --crimson-light: #c22235;
+      --gold: #C8A24D; --gold-dim: rgba(200,162,77,0.25);
+      --gray-bg: #F4F5F7; --charcoal: #1C1C1C; --white: #ffffff;
+      --glass: rgba(255,255,255,0.06); --glass-border: rgba(200,162,77,0.2);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body {
-      font-family: 'Roboto', system-ui, sans-serif;
-      background: var(--bg-white);
-      color: var(--text-muted);
-      line-height: 1.6;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-      position: relative;
-      min-height: 100vh;
-    }
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('background.png') no-repeat center center fixed;
-      background-size: cover;
-      opacity: 0.08;
-      z-index: -1;
-      pointer-events: none;
-    }
-    
-    h1, h2, h3, h4, h5, h6 { font-family: 'Orbitron', sans-serif; font-weight: 700; color: var(--text-dark); letter-spacing: 1px; }
-    header, section, footer { position: relative; z-index: 1; background: rgba(255,255,255,0.85); backdrop-filter: blur(6px); }
-    
-    header {
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(12px);
-      text-align: center;
-      padding: 5rem 1rem 4rem;
-      animation: fadeInUp 1s ease-out 0.3s forwards;
-      border-bottom: 2px solid var(--primary-green);
-    }
-    .logo-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
-    .logo-circle {
-      width: clamp(180px, 30vw, 220px);
-      height: clamp(180px, 30vw, 220px);
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary-green), var(--primary-soft-green), var(--secondary-teal));
-      background-size: 200% 200%;
-      display: flex; justify-content: center; align-items: center; margin-bottom: 2rem;
-      box-shadow: 0 8px 20px rgba(0, 204, 102, 0.25);
-      animation: gradientShift 8s infinite alternate, pulseGlow 2s infinite ease-in-out;
-      transition: transform 0.3s ease;
-    }
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 0 0 rgba(0, 204, 102, 0.4); }
-      70% { box-shadow: 0 0 0 15px rgba(0, 204, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0, 204, 102, 0); }
-    }
-    .logo-circle:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(0, 204, 102, 0.5); animation: none; }
-    .logo-img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid rgba(255,255,255,0.7);
-    }
-    .logo-fallback {
-      font-family: 'Orbitron', sans-serif; font-size: 3rem; font-weight: 900; color: white;
-      text-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    .logo-text { display: flex; flex-direction: column; align-items: center; animation: fadeInUp 0.8s ease-out 0.8s forwards; }
-    header h1 { font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 900; color: var(--text-dark); margin-bottom: 0.5rem; }
-    header h1 span { color: var(--primary-green); }
-    header p { font-size: clamp(1rem, 3vw, 1.3rem); color: var(--text-muted); max-width: 600px; margin: 0 auto; }
-    
-    section {
-      padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 1.5rem);
-      max-width: var(--content-width);
-      margin: 0 auto 2rem;
-      background: var(--card-bg);
-      backdrop-filter: blur(8px);
-      border-radius: 28px;
-      border: 1px solid var(--border-light);
-      box-shadow: var(--shadow-sm);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    h2 { text-align: center; font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 2rem; color: var(--text-dark); }
-    h2::after {
-      content: ""; display: block; width: 80px; height: 4px;
-      background: linear-gradient(90deg, var(--primary-green), var(--primary-soft-green), var(--secondary-teal));
-      margin: 0.75rem auto 0; border-radius: 4px;
-    }
-    
-    .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 1.5rem; margin-top: 2rem; }
-    .skill-category {
-      background: white;
-      border-radius: 20px; padding: 1.5rem;
-      border: 1px solid var(--border-light);
-      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-      box-shadow: var(--shadow-sm);
-    }
-    .skill-category:hover { transform: translateY(-8px) scale(1.02); border-color: var(--primary-green); box-shadow: var(--shadow-hover); }
-    .skill-category h3 { font-size: 1.4rem; color: var(--primary-soft-green); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
-    .skill-list { list-style: none; color: var(--text-dark); }
-    .skill-list li { margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; font-weight: 500; }
-    .skill-list li::before { content: '▸'; left: 0; color: var(--primary-green); position: absolute; }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-    .skill-tag { background: rgba(0,204,102,0.1); color: var(--primary-soft-green); padding: 0.4rem 1rem; border-radius: 30px; font-size: 0.9rem; border: 1px solid rgba(0,204,102,0.2); font-weight: 500; }
-    
-    .projects-btn-section { text-align: center; padding: 1rem; }
-    .browse-projects-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 1rem;
-      background: var(--gradient-green);
-      padding: 1rem 2.5rem;
-      font-size: 1.3rem;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: bold;
-      color: white;
-      border-radius: 60px;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(0,204,102,0.3);
-      text-decoration: none;
-    }
-    .browse-projects-btn:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 12px 28px rgba(0,204,102,0.4);
-    }
-    
-    .contact-form {
-      max-width: 800px;
-      margin: 2rem auto 0;
-      background: white;
-      border-radius: 28px;
-      padding: 2rem;
-      border: 1px solid var(--border-light);
-    }
-    .form-group { margin-bottom: 1.5rem; }
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: var(--text-dark);
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.9rem;
-    }
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 0.8rem 1rem;
-      background: #fefefe;
-      border: 1px solid var(--border-light);
-      border-radius: 16px;
-      color: var(--text-dark);
-      font-size: 1rem;
-      transition: 0.2s;
-    }
-    .form-group input:focus, .form-group textarea:focus {
-      outline: none;
-      border-color: var(--primary-green);
-      box-shadow: 0 0 0 3px rgba(0,204,102,0.1);
-    }
-    .submit-btn {
-      background: var(--gradient-green);
-      border: none;
-      padding: 0.9rem 2rem;
-      font-size: 1rem;
-      font-weight: bold;
-      font-family: 'Orbitron', sans-serif;
-      border-radius: 50px;
-      cursor: pointer;
-      width: 100%;
-      color: white;
-      transition: 0.2s;
-    }
-    .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(0,204,102,0.3); }
-    .form-status { margin-top: 1rem; text-align: center; font-weight: 500; }
-    .form-status.success { color: var(--primary-soft-green); }
-    .form-status.error { color: #e53e3e; }
-    
-    .testimonials-container { width: 100%; overflow: hidden; padding: 1rem 0; }
-    .testimonials-slider { display: flex; width: fit-content; animation: slideTestimonials 40s linear infinite; }
-    .testimonials-slider:hover { animation-play-state: paused; }
-    .testimonial-card {
-      flex: 0 0 300px;
-      background: white;
-      border-radius: 24px;
-      padding: 1.8rem;
-      margin-right: 1.5rem;
-      border: 1px solid var(--border-light);
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s ease;
-    }
-    .testimonial-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--primary-green);
-      box-shadow: var(--shadow-hover);
-    }
-    .testimonial-card::before {
-      content: '"';
-      position: absolute;
-      top: -5px;
-      left: 16px;
-      font-size: 5rem;
-      color: rgba(0, 204, 102, 0.15);
-      font-family: 'Orbitron', sans-serif;
-    }
-    .testimonial-text { color: var(--text-dark); margin-bottom: 1rem; }
-    .testimonial-author { font-family: 'Orbitron', sans-serif; font-weight: 700; color: var(--primary-soft-green); }
-    @keyframes slideTestimonials {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-300px * 6 - 1.5rem * 6)); }
-    }
-    
-    .stats-slider-container { width: 100%; overflow: hidden; padding: 1rem 0; margin: 2rem auto 0; }
-    .stats-slider { display: flex; width: fit-content; animation: slideStats 30s linear infinite; }
-    .stats-slider:hover { animation-play-state: paused; }
-    .stat-item {
-      flex: 0 0 130px;
-      background: white;
-      padding: 1rem 0.5rem;
-      border-radius: 40px;
-      border: 1px solid var(--border-light);
-      text-align: center;
-      margin-right: 1rem;
-      transition: all 0.2s ease;
-    }
-    .stat-item:hover { border-color: var(--primary-green); transform: scale(1.05); background: rgba(0,204,102,0.05); }
-    .stat-icon { font-size: 1.8rem; color: var(--primary-green); margin-bottom: 0.2rem; }
-    .stat-number { font-size: 1.6rem; font-weight: 900; font-family: 'Orbitron', sans-serif; background: var(--gradient-green); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .stars { color: #f5b042; font-size: 0.9rem; }
-    .stat-label { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-    @keyframes slideStats {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-130px * 4 - 1rem * 4)); }
-    }
-    
-    .socials { text-align: center; padding: 2rem; background: white; border-radius: 40px; margin-top: 2rem; border: 1px solid var(--border-light); }
-    .social-icons { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; }
-    .social-icon {
-      display: inline-flex; width: 60px; height: 60px; border-radius: 50%;
-      background: #f0f2f5; color: var(--text-dark); font-size: 1.8rem;
-      align-items: center; justify-content: center;
-      transition: all 0.3s; border: 1px solid var(--border-light);
-    }
-    .social-icon:hover { transform: translateY(-5px) scale(1.1); background: var(--primary-green); color: white; }
-    
-    footer { text-align: center; padding: 2rem; background: rgba(255,255,255,0.95); border-top: 1px solid var(--border-light); margin-top: 2rem; }
-    
-    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-    @keyframes gradientShift { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
-    
-    @media (max-width: 600px) {
-      .testimonial-card { flex: 0 0 260px; }
-      .stat-item { flex: 0 0 105px; }
-      @keyframes slideTestimonials { 100% { transform: translateX(calc(-260px * 6 - 1.5rem * 6)); } }
-      @keyframes slideStats { 100% { transform: translateX(calc(-105px * 4 - 1rem * 4)); } }
-    }
-    
-    .scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(90deg, var(--primary-green), var(--primary-soft-green)); z-index: 1000; width: 0%; }
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Rajdhani', sans-serif; background: var(--gray-bg); color: var(--charcoal); overflow-x: hidden; }
+    .scroll-bar { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: linear-gradient(90deg, var(--gold), var(--crimson)); z-index: 9999; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(15,61,62,0.97); backdrop-filter: blur(16px); border-bottom: 1px solid var(--glass-border); padding: 0 clamp(1.5rem,5vw,4rem); height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 0.6rem; font-family: 'Cormorant Garamond',serif; font-size: 1.5rem; font-weight: 700; color: var(--white); letter-spacing: 2px; text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-logo-img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 1.5px solid rgba(200,162,77,0.5); display: block; }
+    .nav-logo-fallback { width: 36px; height: 36px; border-radius: 50%; background: var(--emerald-light); border: 1.5px solid rgba(200,162,77,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: var(--gold); letter-spacing: 0; font-family: 'Cormorant Garamond',serif; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.65); font-size: 0.82rem; font-weight: 600; text-decoration: none; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.25s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 1px; background: var(--gold); transform: scaleX(0); transition: transform 0.25s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    #hero { background: var(--emerald); min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 7rem 2rem 5rem; }
+    #hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(200,162,77,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(200,162,77,0.04) 1px,transparent 1px); background-size: 48px 48px; }
+    #hero::after { content: ''; position: absolute; top: -40%; right: -10%; width: 55%; height: 200%; background: linear-gradient(135deg,rgba(166,27,43,0.12),transparent 60%); transform: skewX(-8deg); pointer-events: none; }
+    .hero-inner { position: relative; z-index: 2; max-width: 1100px; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(166,27,43,0.18); border: 1px solid rgba(166,27,43,0.4); color: #f07080; font-size: 0.72rem; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    .hero-tag i { color: var(--crimson); font-size: 0.55rem; }
+    .hero-name { font-family: 'Cormorant Garamond',serif; font-size: clamp(3.2rem,7vw,5.5rem); font-weight: 700; line-height: 1.05; color: var(--white); margin-bottom: 0.3rem; }
+    .hero-name em { color: var(--gold); font-style: normal; display: block; }
+    .hero-role { font-size: 1rem; font-weight: 500; letter-spacing: 3px; color: rgba(255,255,255,0.4); text-transform: uppercase; margin-bottom: 1.8rem; }
+    .hero-desc { font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.62); max-width: 440px; margin-bottom: 2.5rem; }
+    .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--crimson); color: white; padding: 0.85rem 2rem; font-family: 'Rajdhani',sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; border-radius: 2px; transition: all 0.25s; clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); }
+    .btn-primary:hover { background: var(--crimson-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(166,27,43,0.5); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: rgba(255,255,255,0.72); padding: 0.85rem 2rem; font-family: 'Rajdhani',sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(200,162,77,0.4); cursor: pointer; border-radius: 2px; transition: all 0.25s; }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,162,77,0.07); }
+    .hero-card { position: relative; }
+    .hero-card-inner { background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border); border-radius: 4px; padding: 2rem; backdrop-filter: blur(8px); position: relative; overflow: hidden; }
+    .hero-card-inner::before { content: ''; position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 40px 40px 0; border-color: transparent var(--gold) transparent transparent; opacity: 0.4; }
+    .hero-avatar-wrap { width: 100%; aspect-ratio: 1; max-width: 240px; margin: 0 auto 1.5rem; border-radius: 3px; overflow: hidden; border: 2px solid rgba(200,162,77,0.35); background: var(--emerald-dark); display: flex; align-items: center; justify-content: center; }
+    .hero-avatar-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .avatar-fallback { font-family: 'Cormorant Garamond',serif; font-size: 5rem; font-weight: 700; color: var(--gold); opacity: 0.5; }
+    .dossier-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(200,162,77,0.1); }
+    .dossier-row:last-child { border-bottom: none; }
+    .dossier-label { color: var(--gold); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; min-width: 80px; font-size: 0.7rem; }
+    .dossier-val { color: rgba(255,255,255,0.72); font-family: 'DM Mono',monospace; font-size: 0.78rem; }
+    .stat-badge { position: absolute; background: var(--crimson); color: white; padding: 0.5rem 0.9rem; border-radius: 2px; font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; clip-path: polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,6px 100%,0 calc(100% - 6px)); }
+    .badge-top { top: -14px; left: 16px; }
+    .badge-bottom { bottom: -14px; right: 16px; background: var(--emerald-dark); border: 1px solid var(--gold-dim); color: var(--gold); }
+    .stats-strip { display: grid; grid-template-columns: repeat(4,1fr); background: var(--emerald-dark); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); }
+    .stat-block { padding: 2.5rem 1.5rem; text-align: center; border-right: 1px solid rgba(200,162,77,0.12); transition: background 0.3s; }
+    .stat-block:last-child { border-right: none; }
+    .stat-block:hover { background: rgba(200,162,77,0.05); }
+    .stat-num { font-family: 'Cormorant Garamond',serif; font-size: 3rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .stat-lbl { font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 0.4rem; }
+    .stat-stars { color: var(--gold); font-size: 0.7rem; margin-top: 0.3rem; letter-spacing: 2px; }
+    .section { padding: clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem); max-width: 1200px; margin: 0 auto; }
+    .section-label { display: flex; align-items: center; gap: 1rem; color: var(--crimson); font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1rem; }
+    .section-label::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--crimson); }
+    h2 { font-family: 'Cormorant Garamond',serif; font-size: clamp(2.2rem,5vw,3.5rem); color: var(--emerald); font-weight: 700; line-height: 1.1; margin-bottom: 3rem; }
+    h2 span { color: var(--crimson); }
+    .section-dark { background: var(--emerald); padding: clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem); position: relative; overflow: hidden; }
+    .section-dark::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(200,162,77,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(200,162,77,0.03) 1px,transparent 1px); background-size: 40px 40px; }
+    .section-dark-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
+    .section-dark h2 { color: var(--white); }
+    .section-dark .section-label { color: var(--gold); }
+    .section-dark .section-label::before { background: var(--gold); }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1.5rem; }
+    .skill-card { background: var(--white); border: 1px solid rgba(15,61,62,0.1); border-top: 3px solid var(--emerald); padding: 1.8rem 1.5rem; transition: all 0.3s ease; clip-path: polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%); }
+    .skill-card:hover { border-top-color: var(--crimson); box-shadow: 0 12px 32px rgba(15,61,62,0.12); transform: translateY(-6px); }
+    .skill-card-icon { font-size: 1.6rem; color: var(--emerald); margin-bottom: 1rem; transition: color 0.3s; }
+    .skill-card:hover .skill-card-icon { color: var(--crimson); }
+    .skill-card h3 { font-family: 'Rajdhani',sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--charcoal); margin-bottom: 1rem; }
+    .skill-card ul { list-style: none; }
+    .skill-card li { font-size: 0.9rem; color: #555; padding: 0.3rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 0.5rem; }
+    .skill-card li::before { content: 'a'; color: var(--gold); font-weight: bold; content: '\203A'; }
+    .skill-card li:last-child { border-bottom: none; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+    .tag { background: rgba(15,61,62,0.08); color: var(--emerald); padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px; border-radius: 2px; }
+    .projects-cta-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,162,77,0.3); border-left: 4px solid var(--crimson); padding: 3rem; text-align: center; max-width: 640px; margin: 0 auto; clip-path: polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px)); }
+    .project-count { font-family: 'Cormorant Garamond',serif; font-size: 4.5rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 0.3rem; }
+    .projects-cta-box p { font-size: 1rem; color: rgba(255,255,255,0.58); margin-bottom: 2rem; line-height: 1.75; }
+    .testimonials-track-wrap { overflow: hidden; width: 100%; padding: 1rem 0; }
+    .testimonials-track { display: flex; width: max-content; animation: scrollLeft 44s linear infinite; }
+    .testimonials-track:hover { animation-play-state: paused; }
+    @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .t-card { flex: 0 0 300px; margin-right: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 3px; padding: 1.8rem; position: relative; transition: all 0.3s; }
+    .t-card::before { content: '"'; position: absolute; top: 0.5rem; left: 1rem; font-family: 'Cormorant Garamond',serif; font-size: 4rem; color: rgba(200,162,77,0.12); line-height: 1; }
+    .t-card:hover { border-color: rgba(200,162,77,0.45); background: rgba(255,255,255,0.07); }
+    .t-text { font-size: 0.92rem; line-height: 1.7; color: rgba(255,255,255,0.68); margin-bottom: 1.2rem; }
+    .t-author { font-family: 'Rajdhani',sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 1.5px; color: var(--gold); text-transform: uppercase; }
+    .t-role { font-size: 0.75rem; color: rgba(255,255,255,0.38); margin-top: 0.1rem; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; }
+    .contact-info h3 { font-family: 'Cormorant Garamond',serif; font-size: 1.8rem; color: var(--charcoal); margin-bottom: 1rem; }
+    .contact-info p { font-size: 1rem; color: #555; line-height: 1.75; margin-bottom: 2rem; }
+    .contact-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; color: #444; font-size: 0.9rem; }
+    .contact-item-icon { width: 40px; height: 40px; border-radius: 2px; background: rgba(15,61,62,0.08); color: var(--emerald); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .contact-form-box { background: var(--white); border: 1px solid rgba(15,61,62,0.1); padding: 2.5rem; clip-path: polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,0 100%); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .fg { margin-bottom: 1rem; }
+    .fg label { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--emerald); margin-bottom: 0.4rem; }
+    .fg input, .fg textarea { width: 100%; padding: 0.85rem 1rem; background: var(--gray-bg); border: 1px solid rgba(15,61,62,0.15); border-radius: 2px; font-family: 'Rajdhani',sans-serif; font-size: 0.95rem; color: var(--charcoal); transition: 0.2s; }
+    .fg input:focus, .fg textarea:focus { outline: none; border-color: var(--emerald); background: white; box-shadow: 0 0 0 3px rgba(15,61,62,0.08); }
+    .fg textarea { resize: vertical; min-height: 110px; }
+    .submit-btn { display: inline-flex; align-items: center; gap: 0.7rem; background: var(--crimson); color: white; padding: 0.95rem 2.5rem; border: none; cursor: pointer; font-family: 'Rajdhani',sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: all 0.25s; width: 100%; justify-content: center; clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); }
+    .submit-btn:hover { background: var(--crimson-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(166,27,43,0.4); }
+    .form-status { margin-top: 0.8rem; font-size: 0.9rem; font-weight: 600; text-align: center; }
+    .form-status.success { color: var(--emerald); }
+    .form-status.error { color: var(--crimson); }
+    .socials-row { display: flex; justify-content: center; gap: 1.2rem; margin-top: 2.5rem; }
+    .soc { width: 52px; height: 52px; background: rgba(200,162,77,0.08); border: 1px solid var(--glass-border); border-radius: 2px; color: rgba(255,255,255,0.6); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; text-decoration: none; transition: all 0.25s; }
+    .soc:hover { background: var(--crimson); border-color: var(--crimson); color: white; transform: translateY(-4px); box-shadow: 0 6px 20px rgba(166,27,43,0.4); }
+    footer { background: var(--emerald-dark); border-top: 1px solid var(--glass-border); padding: 2rem clamp(1.5rem,5vw,4rem); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    footer p { color: rgba(255,255,255,0.32); font-size: 0.8rem; letter-spacing: 1px; }
+    .footer-brand { display: flex; align-items: center; gap: 0.7rem; font-family: 'Cormorant Garamond',serif; font-size: 1.1rem; color: var(--gold); font-weight: 700; letter-spacing: 2px; }
+    .footer-logo-img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; border: 1.5px solid rgba(200,162,77,0.45); display: block; }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; gap: 3rem; text-align: center; } .hero-desc { margin: 0 auto 2.5rem; } .hero-cta-row { justify-content: center; } .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; } .stats-strip { grid-template-columns: repeat(2,1fr); } .stat-block:nth-child(2) { border-right: none; } }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .nav-links { display: none; } .hero-avatar-wrap { max-width: 180px; } }
   </style>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-  <div id="particles-js"></div>
-  <div class="scroll-progress"></div>
-  <a href="#about" class="sr-only">Skip to main content</a>
-  
-  <header>
-    <div class="logo-container">
-      <div class="logo-circle">
-        <img src="loidforger.png" alt="Loid Forger" class="logo-img" width="220" height="220" loading="eager" onerror="this.onerror=null; this.parentNode.innerHTML += '<div class=\'logo-fallback\'>LF</div>';">
-      </div>
-      <div class="logo-text">
-        <h1>Loid Forger <span>— Frontend, Backend & Web3 Developer</span></h1>
-        <p>Full-stack developer focused on clean interfaces and reliable systems</p>
+<div class="scroll-bar" id="scrollBar"></div>
+<nav>
+  <a href="#hero" class="nav-logo">
+    <img src="loidforger.png" alt="Loid Forger" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="nav-logo-fallback" style="display:none">LF</div>
+    L<span>.</span>FORGER
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#testimonials">Clients</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><i class="fas fa-circle"></i> Available for hire</div>
+      <h1 class="hero-name">Loid<em>Forger</em></h1>
+      <p class="hero-role">Frontend &middot; Backend &middot; Web3</p>
+      <p class="hero-desc">Full-stack developer crafting clean interfaces and reliable systems. 50+ successful projects delivered with precision and speed.</p>
+      <div class="hero-cta-row">
+        <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Start a Project</a>
+        <a href="projects.html" target="_blank" class="btn-outline"><i class="fas fa-folder-open"></i> View Portfolio</a>
       </div>
     </div>
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I'm <strong>Loid Forger</strong>, a <strong>5-star rated full-stack developer</strong> specializing in <strong>frontend</strong>, <strong>backend</strong>, and <strong>Web3</strong>. 50+ clients brought to life with clean, professional websites.</p>
-      <p>From responsive interfaces to blockchain features, I write clean code and solve real problems.</p>
-      <p>Always looking to <em>grow, improve, and build things that matter.</em></p>
-    </section>
-
-    <section id="skills">
-      <h2>Skills & Tools</h2>
-      <div class="skills-container">
-        <div class="skill-category"><h3><i class="fas fa-code"></i> Technical</h3><ul class="skill-list"><li>Frontend Development</li><li>Backend Development</li><li>Web3 Development</li><li>Problem Solving</li></ul></div>
-        <div class="skill-category"><h3><i class="fas fa-cogs"></i> Frameworks</h3><div class="skill-tags"><span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">Node.js</span><span class="skill-tag">Express</span></div></div>
-        <div class="skill-category"><h3><i class="fas fa-tools"></i> Tools</h3><ul class="skill-list"><li>Git, GitHub</li><li>VS Code</li><li>Chrome DevTools</li></ul></div>
-        <div class="skill-category"><h3><i class="fas fa-rocket"></i> Deployment</h3><ul class="skill-list"><li>Netlify, Vercel</li><li>Discord</li><li>Telegram</li></ul></div>
+    <div class="hero-card">
+      <div class="stat-badge badge-top">5-Star Developer</div>
+      <div class="hero-card-inner">
+        <div class="hero-avatar-wrap">
+          <img src="loidforger.png" alt="Loid Forger" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:3px" onerror="this.style.display='none';document.getElementById('af').style.display='flex'">
+          <div class="avatar-fallback" id="af" style="display:none">LF</div>
+        </div>
+        <div class="dossier-row"><span class="dossier-label">Status</span><span class="dossier-val">Active &mdash; 24h delivery</span></div>
+        <div class="dossier-row"><span class="dossier-label">Rating</span><span class="dossier-val">5.0 / 5.0</span></div>
+        <div class="dossier-row"><span class="dossier-label">Clients</span><span class="dossier-val">50+ completed</span></div>
+        <div class="dossier-row"><span class="dossier-label">Stack</span><span class="dossier-val">React &middot; Node &middot; Web3</span></div>
       </div>
-    </section>
+      <div class="stat-badge badge-bottom">50+ Clients</div>
+    </div>
+  </div>
+</section>
 
-    <section id="projects-section">
-      <h2>My Work</h2>
-      <div class="projects-btn-section">
-        <a href="projects.html" target="_blank" class="browse-projects-btn">
-          <i class="fas fa-folder-open"></i> Browse All Projects
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <p style="margin-top: 1.5rem;">✨ 50+ live demos — full portfolio on dedicated page</p>
+<div id="about">
+  <div class="section">
+    <p class="section-label reveal">Intelligence File</p>
+    <h2 class="reveal">About <span>Me</span></h2>
+    <p class="reveal" style="font-size:1.1rem;line-height:1.85;color:#444;margin-bottom:1.2rem;max-width:720px">I'm <strong>Loid Forger</strong>, a <strong>5-star rated full-stack developer</strong> specializing in <strong>frontend</strong>, <strong>backend</strong>, and <strong>Web3</strong>. 50+ clients brought to life through clean, professional websites and reliable systems.</p>
+    <p class="reveal" style="font-size:1.05rem;line-height:1.85;color:#555;max-width:720px">From responsive interfaces to blockchain integrations, I operate at the intersection of design and engineering. Always looking to <em>grow, improve, and build things that matter.</em></p>
+  </div>
+</div>
+
+<div id="skills" style="background:var(--white)">
+  <div class="section">
+    <p class="section-label reveal">Capabilities</p>
+    <h2 class="reveal">Skills &amp; <span>Tools</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal"><div class="skill-card-icon"><i class="fas fa-code"></i></div><h3>Technical</h3><ul><li>Frontend Development</li><li>Backend Development</li><li>Web3 / Blockchain</li><li>Problem Solving</li></ul></div>
+      <div class="skill-card reveal"><div class="skill-card-icon"><i class="fas fa-layer-group"></i></div><h3>Frameworks</h3><div class="tag-row"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">Express</span></div></div>
+      <div class="skill-card reveal"><div class="skill-card-icon"><i class="fas fa-tools"></i></div><h3>Tools</h3><ul><li>Git / GitHub</li><li>VS Code</li><li>Chrome DevTools</li></ul></div>
+      <div class="skill-card reveal"><div class="skill-card-icon"><i class="fas fa-rocket"></i></div><h3>Deployment</h3><ul><li>Netlify / Vercel</li><li>Discord</li><li>Telegram</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<div id="work" class="section-dark">
+  <div class="section-dark-inner">
+    <p class="section-label reveal">Portfolio</p>
+    <h2 class="reveal">My <span style="color:var(--gold)">Work</span></h2>
+    <div class="projects-cta-box reveal">
+      <div class="project-count">50+</div>
+      <p>Live demos across frontend, backend, and Web3 &mdash; all on a dedicated portfolio page. Click below to explore.</p>
+      <a href="projects.html" target="_blank" class="btn-primary"><i class="fas fa-folder-open"></i> Browse All Projects</a>
+    </div>
+  </div>
+</div>
+
+<div id="testimonials" class="section-dark" style="padding-bottom:1rem">
+  <div class="section-dark-inner">
+    <p class="section-label reveal">Client Voices</p>
+    <h2 class="reveal">Testimonials</h2>
+  </div>
+  <div class="testimonials-track-wrap">
+    <div class="testimonials-track">
+      <div class="t-card"><p class="t-text">"Working with Loid was one of the best decisions for our project &mdash; he understood Web3 culture instantly."</p><div class="t-author">TaxEvasionTuna</div><div class="t-role">Core Team</div></div>
+      <div class="t-card"><p class="t-text">"We needed a site that felt serious but aligned with the memecoin space. Loid delivered exactly that."</p><div class="t-author">Dadacoin</div><div class="t-role">Founder</div></div>
+      <div class="t-card"><p class="t-text">"Optima-X required a modern presence. Loid built a site that communicates innovation perfectly."</p><div class="t-author">Optima-X</div><div class="t-role">Lead</div></div>
+      <div class="t-card"><p class="t-text">"Speed matters in Web3, and Loid moves fast without sacrificing quality. Highly recommended."</p><div class="t-author">WaveCoin</div><div class="t-role">Marketing</div></div>
+      <div class="t-card"><p class="t-text">"Most developers don't understand meme energy. Loid does &mdash; and he captures it perfectly."</p><div class="t-author">PumpCat</div><div class="t-role">Community Manager</div></div>
+      <div class="t-card"><p class="t-text">"SharedCoin needed clarity. Loid structured everything intuitively and made it look sharp."</p><div class="t-author">SharedCoin</div><div class="t-role">Co-Founder</div></div>
+      <div class="t-card"><p class="t-text">"Working with Loid was one of the best decisions for our project &mdash; he understood Web3 culture instantly."</p><div class="t-author">TaxEvasionTuna</div><div class="t-role">Core Team</div></div>
+      <div class="t-card"><p class="t-text">"We needed a site that felt serious but aligned with the memecoin space. Loid delivered exactly that."</p><div class="t-author">Dadacoin</div><div class="t-role">Founder</div></div>
+      <div class="t-card"><p class="t-text">"Optima-X required a modern presence. Loid built a site that communicates innovation perfectly."</p><div class="t-author">Optima-X</div><div class="t-role">Lead</div></div>
+      <div class="t-card"><p class="t-text">"Speed matters in Web3, and Loid moves fast without sacrificing quality. Highly recommended."</p><div class="t-author">WaveCoin</div><div class="t-role">Marketing</div></div>
+      <div class="t-card"><p class="t-text">"Most developers don't understand meme energy. Loid does &mdash; and he captures it perfectly."</p><div class="t-author">PumpCat</div><div class="t-role">Community Manager</div></div>
+      <div class="t-card"><p class="t-text">"SharedCoin needed clarity. Loid structured everything intuitively and made it look sharp."</p><div class="t-author">SharedCoin</div><div class="t-role">Co-Founder</div></div>
+    </div>
+  </div>
+  <div class="section-dark-inner" style="text-align:center;padding-top:3rem;padding-bottom:1rem">
+    <p class="section-label reveal" style="justify-content:center">Connect</p>
+    <h3 class="reveal" style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:white;margin-bottom:0.5rem;font-weight:700">Find Me Online</h3>
+    <div class="socials-row reveal">
+      <a href="https://x.com/X_LoidForger" target="_blank" class="soc" aria-label="X"><i class="fab fa-twitter"></i></a>
+      <a href="https://t.me/X_LoidForger" target="_blank" class="soc" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="https://github.com/LoidForger-dev" target="_blank" class="soc" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="stats-strip">
+  <div class="stat-block"><div class="stat-num">5.0</div><div class="stat-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="stat-lbl">Avg Rating</div></div>
+  <div class="stat-block"><div class="stat-num">50+</div><div class="stat-lbl">Happy Clients</div></div>
+  <div class="stat-block"><div class="stat-num">100x</div><div class="stat-lbl">Highest ROI</div></div>
+  <div class="stat-block"><div class="stat-num">24h</div><div class="stat-lbl">Avg Delivery</div></div>
+</div>
+
+<div id="contact">
+  <div class="section">
+    <p class="section-label reveal">Briefing Room</p>
+    <h2 class="reveal">Let's Build <span>Together</span></h2>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Got a project in mind?</h3>
+        <p>Fill out the form and I'll get back to you within 24 hours. Whether it's a Web3 landing page, full-stack app, or blockchain feature &mdash; I'm ready.</p>
+        <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-clock"></i></div><span>24h average response time</span></div>
+        <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-star"></i></div><span>5.0 star rated across all projects</span></div>
+        <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-shield-alt"></i></div><span>Clean code, delivered on time</span></div>
       </div>
-    </section>
-
-    <section id="contact">
-      <h2>📬 Let's Build Together</h2>
-      <p style="text-align: center; margin-bottom: 1rem;">Got a project in mind? Fill out the form and I’ll get back to you within 24h.</p>
-      <div class="contact-form">
+      <div class="contact-form-box reveal">
         <form id="projectForm">
-          <div class="form-group">
-            <label for="projectName">Project Name *</label>
-            <input type="text" id="projectName" required placeholder="e.g., Decentralized Exchange">
+          <div class="form-row">
+            <div class="fg"><label for="projectName">Project Name *</label><input type="text" id="projectName" required placeholder="e.g., Decentralized Exchange"></div>
+            <div class="fg"><label for="ticker">Ticker *</label><input type="text" id="ticker" required placeholder="e.g., DEX"></div>
           </div>
-          <div class="form-group">
-            <label for="ticker">Ticker *</label>
-            <input type="text" id="ticker" required placeholder="e.g., DEX, WEB3">
-          </div>
-          <div class="form-group">
-            <label for="about">About the project *</label>
-            <textarea id="about" rows="4" required placeholder="Describe your vision, tech stack, goals..."></textarea>
-          </div>
-          <div class="form-group">
-            <label for="xLink">Project X link *</label>
-            <input type="url" id="xLink" required placeholder="https://x.com/yourproject">
-          </div>
-          <div class="form-group">
-            <label for="telegramLink">Project Telegram link (if available)</label>
-            <input type="url" id="telegramLink" placeholder="https://t.me/yourchannel">
-          </div>
+          <div class="fg"><label for="about">About the Project *</label><textarea id="about" required placeholder="Describe your vision, goals, tech stack..."></textarea></div>
+          <div class="fg"><label for="xLink">Project X Link *</label><input type="url" id="xLink" required placeholder="https://x.com/yourproject"></div>
+          <div class="fg"><label for="telegramLink">Telegram Link (optional)</label><input type="url" id="telegramLink" placeholder="https://t.me/yourchannel"></div>
           <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit Request</button>
           <div id="formStatus" class="form-status"></div>
         </form>
       </div>
-    </section>
+    </div>
+  </div>
+</div>
 
-    <section id="testimonials">
-      <h2>Client Testimonials</h2>
-      <div class="testimonials-container">
-        <div class="testimonials-slider">
-          <div class="testimonial-card"><div class="testimonial-text">"Working with Loid was one of the best decisions... he understood Web3 culture instantly."</div><div class="testimonial-author">TaxEvasionTuna</div><div class="testimonial-role">Core Team</div></div>
-          <div class="testimonial-card"><div class="testimonial-text">"We needed a site that felt serious but aligned with memecoin space. Loid delivered."</div><div class="testimonial-author">Dadacoin</div><div class="testimonial-role">Founder</div></div>
-          <div class="testimonial-card"><div class="testimonial-text">"Optima-X required a modern presence. Loid built a site that communicates innovation."</div><div class="testimonial-author">Optima-X</div><div class="testimonial-role">Lead</div></div>
-          <div class="testimonial-card"><div class="testimonial-text">"Speed matters in Web3, and Loid moves fast without sacrificing quality."</div><div class="testimonial-author">WaveCoin</div><div class="testimonial-role">Marketing</div></div>
-          <div class="testimonial-card"><div class="testimonial-text">"Most developers don't understand meme energy. Loid does."</div><div class="testimonial-author">PumpCat</div><div class="testimonial-role">CM</div></div>
-          <div class="testimonial-card"><div class="testimonial-text">"SharedCoin needed clarity. Loid structured everything intuitively."</div><div class="testimonial-author">SharedCoin</div><div class="testimonial-role">Co-Founder</div></div>
-          <!-- duplicate for seamless loop -->
-          <div class="testimonial-card"><div class="testimonial-text">"Working with Loid was one of the best decisions... he understood Web3 culture instantly."</div><div class="testimonial-author">TaxEvasionTuna</div><div class="testimonial-role">Core Team</div></div>
-          <div class="testimonial-card"><div class="testimonial-text">"We needed a site that felt serious but aligned with memecoin space. Loid delivered."</div><div class="testimonial-author">Dadacoin</div><div class="testimonial-role">Founder</div></div>
-          <div class="testimonial-card"><div class="testimonial-text">"Optima-X required a modern presence. Loid built a site that communicates innovation."</div><div class="testimonial-author">Optima-X</div><div class="testimonial-role">Lead</div></div>
-          <div class="testimonial-card"><div class="testimonial-text">"Speed matters in Web3, and Loid moves fast without sacrificing quality."</div><div class="testimonial-author">WaveCoin</div><div class="testimonial-role">Marketing</div></div>
-          <div class="testimonial-card"><div class="testimonial-text">"Most developers don't understand meme energy. Loid does."</div><div class="testimonial-author">PumpCat</div><div class="testimonial-role">CM</div></div>
-          <div class="testimonial-card"><div class="testimonial-text">"SharedCoin needed clarity. Loid structured everything intuitively."</div><div class="testimonial-author">SharedCoin</div><div class="testimonial-role">Co-Founder</div></div>
-        </div>
-      </div>
-    </section>
+<footer>
+  <span class="footer-brand">
+    <img src="loidforger.png" alt="Loid Forger" class="footer-logo-img" onerror="this.style.display='none'">
+    L. FORGER
+  </span>
+  <p>&copy; <span id="year"></span> Loid Forger. All rights reserved.</p>
+  <p style="color:rgba(255,255,255,0.18);font-size:0.7rem;letter-spacing:1px">FULL-STACK &middot; WEB3 &middot; FRONTEND &middot; BACKEND</p>
+</footer>
 
-    <section class="socials">
-      <h3>Connect With Me</h3>
-      <div class="social-icons">
-        <a href="https://x.com/X_LoidForger" target="_blank" class="social-icon" aria-label="X"><i class="fab fa-twitter"></i></a>
-        <a href="t.me/X_LoidForger" target="_blank" class="social-icon" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-        <a href="https://github.com/LoidForger-dev" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      </div>
-    </section>
-
-    <section class="stats-slider-container">
-      <div class="stats-slider">
-        <div class="stat-item"><div class="stat-icon"><i class="fas fa-star"></i></div><div class="stat-number">5.0</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><div class="stat-label">Avg Rating</div></div>
-        <div class="stat-item"><div class="stat-icon"><i class="fas fa-users"></i></div><div class="stat-number">50+</div><div class="stat-label">Happy Clients</div></div>
-        <div class="stat-item"><div class="stat-icon"><i class="fas fa-chart-line"></i></div><div class="stat-number">100x</div><div class="stat-label">Highest ROI</div></div>
-        <div class="stat-item"><div class="stat-icon"><i class="fas fa-clock"></i></div><div class="stat-number">24h</div><div class="stat-label">Avg Delivery</div></div>
-        <div class="stat-item"><div class="stat-icon"><i class="fas fa-star"></i></div><div class="stat-number">5.0</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><div class="stat-label">Avg Rating</div></div>
-        <div class="stat-item"><div class="stat-icon"><i class="fas fa-users"></i></div><div class="stat-number">50+</div><div class="stat-label">Happy Clients</div></div>
-        <div class="stat-item"><div class="stat-icon"><i class="fas fa-chart-line"></i></div><div class="stat-number">100x</div><div class="stat-label">Highest ROI</div></div>
-        <div class="stat-item"><div class="stat-icon"><i class="fas fa-clock"></i></div><div class="stat-number">24h</div><div class="stat-label">Avg Delivery</div></div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© <span id="year"></span> Loid Forger. All rights reserved.</p>
-  </footer>
-
-  <script>
-    (function() {
-      document.getElementById('year').textContent = new Date().getFullYear();
-      if (typeof particlesJS !== 'undefined') {
-        particlesJS('particles-js', {
-          particles: {
-            number: { value: 40, density: { enable: true, value_area: 800 } },
-            color: { value: '#00cc66' },
-            shape: { type: 'circle' },
-            opacity: { value: 0.2, random: true },
-            size: { value: 2, random: true },
-            line_linked: { enable: true, distance: 150, color: '#00cc66', opacity: 0.1, width: 1 },
-            move: { enable: true, speed: 1.5, direction: 'none', random: true, out_mode: 'out' }
-          },
-          interactivity: { events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } } }
-        });
-      }
-
-      const progress = document.querySelector('.scroll-progress');
-      window.addEventListener('scroll', () => {
-        const winScroll = document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        progress.style.width = (winScroll / height) * 100 + '%';
-      });
-
-      const sections = document.querySelectorAll('section');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-      }, { threshold: 0.1 });
-      sections.forEach(section => observer.observe(section));
-
-      const form = document.getElementById('projectForm');
-      const statusDiv = document.getElementById('formStatus');
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        statusDiv.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Sending...';
-        statusDiv.className = 'form-status';
-
-        const projectName = document.getElementById('projectName').value.trim();
-        const ticker = document.getElementById('ticker').value.trim();
-        const about = document.getElementById('about').value.trim();
-        const xLink = document.getElementById('xLink').value.trim();
-        const telegramLink = document.getElementById('telegramLink').value.trim();
-
-        if (!projectName || !ticker || !about || !xLink) {
-          statusDiv.innerHTML = '⚠️ Please fill all required fields (*).';
-          statusDiv.className = 'form-status error';
-          return;
-        }
-
-        try {
-          const res = await fetch('https://formsubmit.co/ajax/IamMaverick4@gmail.com', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-            body: JSON.stringify({
-              _subject: `New Project: ${projectName}`,
-              _captcha: 'false',
-              'Project Name': projectName,
-              Ticker: ticker,
-              'About': about,
-              'X Link': xLink,
-              'Telegram': telegramLink || 'Not provided'
-            })
-          });
-          if (res.ok) {
-            statusDiv.innerHTML = '✅ Message sent! I’ll reply soon.';
-            statusDiv.className = 'form-status success';
-            form.reset();
-          } else throw new Error();
-        } catch {
-          statusDiv.innerHTML = '❌ Failed. Please email IamMaverick4@gmail.com directly.';
-          statusDiv.className = 'form-status error';
-        }
-      });
-    })();
-  </script>
+<script>
+(function(){
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const bar = document.getElementById('scrollBar');
+  window.addEventListener('scroll', () => {
+    const s = document.documentElement.scrollTop;
+    const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    bar.style.width = (s/h*100)+'%';
+  },{passive:true});
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const form = document.getElementById('projectForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', async(e)=>{
+    e.preventDefault();
+    status.textContent='Sending...'; status.className='form-status';
+    const pn=document.getElementById('projectName').value.trim();
+    const tk=document.getElementById('ticker').value.trim();
+    const ab=document.getElementById('about').value.trim();
+    const xl=document.getElementById('xLink').value.trim();
+    const tl=document.getElementById('telegramLink').value.trim();
+    if(!pn||!tk||!ab||!xl){status.textContent='Please fill all required fields.';status.className='form-status error';return;}
+    try{
+      const res=await fetch('https://formsubmit.co/ajax/IamMaverick4@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({_subject:'New Project: '+pn,_captcha:'false','Project Name':pn,Ticker:tk,About:ab,'X Link':xl,Telegram:tl||'Not provided'})});
+      if(res.ok){status.textContent="Message sent! I'll reply soon.";status.className='form-status success';form.reset();}
+      else throw new Error();
+    }catch{status.textContent='Failed. Email IamMaverick4@gmail.com directly.';status.className='form-status error';}
+  });
+})();
+</script>
 </body>
 </html>
