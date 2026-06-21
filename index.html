@@ -263,14 +263,18 @@
         <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-shield-alt"></i></div><span>Clean code, delivered on time</span></div>
       </div>
       <div class="contact-form-box reveal">
-        <form id="projectForm">
+        <form id="projectForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="59872813-72bf-414c-b67e-851a7d6c3d89">
+          <input type="hidden" name="subject" value="New Project Inquiry — YUSUF TECH">
+          <input type="hidden" name="redirect" value="https://yusufking.xyz/?sent=true#contact">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-row">
-            <div class="fg"><label for="projectName">Project Name *</label><input type="text" id="projectName" required placeholder="e.g., Decentralized Exchange"></div>
-            <div class="fg"><label for="ticker">Ticker *</label><input type="text" id="ticker" required placeholder="e.g., DEX"></div>
+            <div class="fg"><label for="projectName">Project Name *</label><input type="text" id="projectName" name="Project Name" required placeholder="e.g., Decentralized Exchange"></div>
+            <div class="fg"><label for="ticker">Ticker *</label><input type="text" id="ticker" name="Ticker" required placeholder="e.g., DEX"></div>
           </div>
-          <div class="fg"><label for="about">About the Project *</label><textarea id="about" required placeholder="Describe your vision, goals, tech stack..."></textarea></div>
-          <div class="fg"><label for="xLink">Project X Link *</label><input type="url" id="xLink" required placeholder="https://x.com/yourproject"></div>
-          <div class="fg"><label for="telegramLink">Telegram Link (optional)</label><input type="url" id="telegramLink" placeholder="https://t.me/yourchannel"></div>
+          <div class="fg"><label for="about">About the Project *</label><textarea id="about" name="About the Project" required placeholder="Describe your vision, goals, tech stack..."></textarea></div>
+          <div class="fg"><label for="xLink">Project X Link *</label><input type="url" id="xLink" name="Project X Link" required placeholder="https://x.com/yourproject"></div>
+          <div class="fg"><label for="telegramLink">Telegram Link (optional)</label><input type="url" id="telegramLink" name="Telegram Link" placeholder="https://t.me/yourchannel"></div>
           <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit Request</button>
           <div id="formStatus" class="form-status"></div>
         </form>
@@ -303,31 +307,10 @@
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   const form = document.getElementById('projectForm');
   const status = document.getElementById('formStatus');
-  const WEB3FORMS_ACCESS_KEY = '59872813-72bf-414c-b67e-851a7d6c3d89';
-  form.addEventListener('submit', async(e)=>{
-    e.preventDefault();
-    status.textContent='Sending...'; status.className='form-status';
-    const pn=document.getElementById('projectName').value.trim();
-    const tk=document.getElementById('ticker').value.trim();
-    const ab=document.getElementById('about').value.trim();
-    const xl=document.getElementById('xLink').value.trim();
-    const tl=document.getElementById('telegramLink').value.trim();
-    if(!pn||!tk||!ab||!xl){status.textContent='Please fill all required fields.';status.className='form-status error';return;}
-    try{
-      const controller=new AbortController();
-      const timeoutId=setTimeout(()=>controller.abort(),15000);
-      const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({access_key:WEB3FORMS_ACCESS_KEY,subject:'New Project: '+pn,from_name:pn,'Project Name':pn,Ticker:tk,About:ab,'X Link':xl,Telegram:tl||'Not provided'}),signal:controller.signal});
-      clearTimeout(timeoutId);
-      const data=await res.json();
-      if(data.success){status.textContent="Message sent! I'll reply soon.";status.className='form-status success';form.reset();}
-      else throw new Error(data.message||'Submission failed');
-    }catch(err){
-      console.error('Form submission error:',err);
-      const reason=err && err.name==='AbortError' ? 'Request timed out' : (err && err.message ? err.message : 'Network error');
-      status.textContent=`Failed (${reason}). Email IamMaverick4@gmail.com directly.`;
-      status.className='form-status error';
-    }
-  });
+  if (new URLSearchParams(window.location.search).get('sent') === 'true') {
+    status.textContent = "Message sent! I'll reply soon.";
+    status.className = 'form-status success';
+  }
 })();
 </script>
 </body>
