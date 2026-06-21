@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Loid Forger | Full-stack developer specializing in frontend, backend, and Web3 development. 50+ happy clients, 5-star rated." />
-  <title>Loid Forger — 5-Star Web3 & Full-Stack Developer</title>
+  <meta name="description" content="ʏᴜꜱᴜꜰ• | Full-stack developer specializing in frontend, backend, and Web3 development. 50+ happy clients, 5-star rated." />
+  <title>ʏᴜꜱᴜꜰ• — 5-Star Web3 & Full-Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Rajdhani:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -32,7 +32,6 @@
     .nav-links a:hover { color: var(--gold); }
     .nav-links a:hover::after { transform: scaleX(1); }
     #hero { background: var(--emerald); min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 7rem 2rem 5rem; }
-    #hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(200,162,77,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(200,162,77,0.04) 1px,transparent 1px); background-size: 48px 48px; }
     #hero::after { content: ''; position: absolute; top: -40%; right: -10%; width: 55%; height: 200%; background: linear-gradient(135deg,rgba(166,27,43,0.12),transparent 60%); transform: skewX(-8deg); pointer-events: none; }
     .hero-inner { position: relative; z-index: 2; max-width: 1100px; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
     .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(166,27,43,0.18); border: 1px solid rgba(166,27,43,0.4); color: #f07080; font-size: 0.72rem; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 2px; margin-bottom: 1.5rem; }
@@ -42,12 +41,12 @@
     .hero-role { font-size: 1rem; font-weight: 500; letter-spacing: 3px; color: rgba(255,255,255,0.4); text-transform: uppercase; margin-bottom: 1.8rem; }
     .hero-desc { font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.62); max-width: 440px; margin-bottom: 2.5rem; }
     .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-primary { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--crimson); color: white; padding: 0.85rem 2rem; font-family: 'Rajdhani',sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; border-radius: 2px; transition: all 0.25s; clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); }
-    .btn-primary:hover { background: var(--crimson-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(166,27,43,0.5); }
-    .btn-outline { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: rgba(255,255,255,0.72); padding: 0.85rem 2rem; font-family: 'Rajdhani',sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(200,162,77,0.4); cursor: pointer; border-radius: 2px; transition: all 0.25s; }
-    .btn-outline:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,162,77,0.07); }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--crimson); color: white; padding: 0.85rem 2rem; font-family: 'Rajdhani',sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; border-radius: 2px; transition: all 0.25s; box-shadow: 0 10px 28px rgba(166,27,43,0.35), 0 2px 6px rgba(0,0,0,0.2); clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); }
+    .btn-primary:hover { background: var(--crimson-light); transform: translateY(-2px); box-shadow: 0 14px 34px rgba(166,27,43,0.55), 0 4px 10px rgba(0,0,0,0.25); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: rgba(255,255,255,0.72); padding: 0.85rem 2rem; font-family: 'Rajdhani',sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(200,162,77,0.4); cursor: pointer; border-radius: 2px; transition: all 0.25s; box-shadow: 0 8px 22px rgba(0,0,0,0.25); }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,162,77,0.07); box-shadow: 0 10px 26px rgba(0,0,0,0.32); }
     .hero-card { position: relative; }
-    .hero-card-inner { background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border); border-radius: 4px; padding: 2rem; backdrop-filter: blur(8px); position: relative; overflow: hidden; }
+    .hero-card-inner { background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border); border-radius: 4px; padding: 2rem; backdrop-filter: blur(8px); position: relative; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 8px 20px rgba(0,0,0,0.3); }
     .hero-card-inner::before { content: ''; position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 40px 40px 0; border-color: transparent var(--gold) transparent transparent; opacity: 0.4; }
     .hero-avatar-wrap { width: 100%; aspect-ratio: 1; max-width: 240px; margin: 0 auto 1.5rem; border-radius: 3px; overflow: hidden; border: 2px solid rgba(200,162,77,0.35); background: var(--emerald-dark); display: flex; align-items: center; justify-content: center; }
     .hero-avatar-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -72,14 +71,13 @@
     h2 { font-family: 'Cormorant Garamond',serif; font-size: clamp(2.2rem,5vw,3.5rem); color: var(--emerald); font-weight: 700; line-height: 1.1; margin-bottom: 3rem; }
     h2 span { color: var(--crimson); }
     .section-dark { background: var(--emerald); padding: clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem); position: relative; overflow: hidden; }
-    .section-dark::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(200,162,77,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(200,162,77,0.03) 1px,transparent 1px); background-size: 40px 40px; }
     .section-dark-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
     .section-dark h2 { color: var(--white); }
     .section-dark .section-label { color: var(--gold); }
     .section-dark .section-label::before { background: var(--gold); }
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1.5rem; }
-    .skill-card { background: var(--white); border: 1px solid rgba(15,61,62,0.1); border-top: 3px solid var(--emerald); padding: 1.8rem 1.5rem; transition: all 0.3s ease; clip-path: polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%); }
-    .skill-card:hover { border-top-color: var(--crimson); box-shadow: 0 12px 32px rgba(15,61,62,0.12); transform: translateY(-6px); }
+    .skill-card { background: var(--white); border: 1px solid rgba(15,61,62,0.1); border-top: 3px solid var(--emerald); padding: 1.8rem 1.5rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(15,61,62,0.1), 0 2px 8px rgba(0,0,0,0.06); clip-path: polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%); }
+    .skill-card:hover { border-top-color: var(--crimson); box-shadow: 0 18px 42px rgba(15,61,62,0.18), 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-6px); }
     .skill-card-icon { font-size: 1.6rem; color: var(--emerald); margin-bottom: 1rem; transition: color 0.3s; }
     .skill-card:hover .skill-card-icon { color: var(--crimson); }
     .skill-card h3 { font-family: 'Rajdhani',sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--charcoal); margin-bottom: 1rem; }
@@ -89,14 +87,14 @@
     .skill-card li:last-child { border-bottom: none; }
     .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
     .tag { background: rgba(15,61,62,0.08); color: var(--emerald); padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px; border-radius: 2px; }
-    .projects-cta-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,162,77,0.3); border-left: 4px solid var(--crimson); padding: 3rem; text-align: center; max-width: 640px; margin: 0 auto; clip-path: polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px)); }
+    .projects-cta-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,162,77,0.3); border-left: 4px solid var(--crimson); padding: 3rem; text-align: center; max-width: 640px; margin: 0 auto; box-shadow: 0 25px 55px rgba(0,0,0,0.35); clip-path: polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px)); }
     .project-count { font-family: 'Cormorant Garamond',serif; font-size: 4.5rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 0.3rem; }
     .projects-cta-box p { font-size: 1rem; color: rgba(255,255,255,0.58); margin-bottom: 2rem; line-height: 1.75; }
     .testimonials-track-wrap { overflow: hidden; width: 100%; padding: 1rem 0; }
     .testimonials-track { display: flex; width: max-content; animation: scrollLeft 44s linear infinite; }
     .testimonials-track:hover { animation-play-state: paused; }
     @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .t-card { flex: 0 0 300px; margin-right: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 3px; padding: 1.8rem; position: relative; transition: all 0.3s; }
+    .t-card { flex: 0 0 300px; margin-right: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 3px; padding: 1.8rem; position: relative; transition: all 0.3s; box-shadow: 0 16px 36px rgba(0,0,0,0.3); }
     .t-card::before { content: '"'; position: absolute; top: 0.5rem; left: 1rem; font-family: 'Cormorant Garamond',serif; font-size: 4rem; color: rgba(200,162,77,0.12); line-height: 1; }
     .t-card:hover { border-color: rgba(200,162,77,0.45); background: rgba(255,255,255,0.07); }
     .t-text { font-size: 0.92rem; line-height: 1.7; color: rgba(255,255,255,0.68); margin-bottom: 1.2rem; }
@@ -107,20 +105,20 @@
     .contact-info p { font-size: 1rem; color: #555; line-height: 1.75; margin-bottom: 2rem; }
     .contact-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; color: #444; font-size: 0.9rem; }
     .contact-item-icon { width: 40px; height: 40px; border-radius: 2px; background: rgba(15,61,62,0.08); color: var(--emerald); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .contact-form-box { background: var(--white); border: 1px solid rgba(15,61,62,0.1); padding: 2.5rem; clip-path: polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,0 100%); }
+    .contact-form-box { background: var(--white); border: 1px solid rgba(15,61,62,0.1); padding: 2.5rem; box-shadow: 0 20px 50px rgba(15,61,62,0.12), 0 4px 14px rgba(0,0,0,0.06); clip-path: polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,0 100%); }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .fg { margin-bottom: 1rem; }
     .fg label { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--emerald); margin-bottom: 0.4rem; }
     .fg input, .fg textarea { width: 100%; padding: 0.85rem 1rem; background: var(--gray-bg); border: 1px solid rgba(15,61,62,0.15); border-radius: 2px; font-family: 'Rajdhani',sans-serif; font-size: 0.95rem; color: var(--charcoal); transition: 0.2s; }
     .fg input:focus, .fg textarea:focus { outline: none; border-color: var(--emerald); background: white; box-shadow: 0 0 0 3px rgba(15,61,62,0.08); }
     .fg textarea { resize: vertical; min-height: 110px; }
-    .submit-btn { display: inline-flex; align-items: center; gap: 0.7rem; background: var(--crimson); color: white; padding: 0.95rem 2.5rem; border: none; cursor: pointer; font-family: 'Rajdhani',sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: all 0.25s; width: 100%; justify-content: center; clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); }
-    .submit-btn:hover { background: var(--crimson-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(166,27,43,0.4); }
+    .submit-btn { display: inline-flex; align-items: center; gap: 0.7rem; background: var(--crimson); color: white; padding: 0.95rem 2.5rem; border: none; cursor: pointer; font-family: 'Rajdhani',sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: all 0.25s; width: 100%; justify-content: center; box-shadow: 0 10px 26px rgba(166,27,43,0.3); clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); }
+    .submit-btn:hover { background: var(--crimson-light); transform: translateY(-2px); box-shadow: 0 14px 32px rgba(166,27,43,0.5); }
     .form-status { margin-top: 0.8rem; font-size: 0.9rem; font-weight: 600; text-align: center; }
     .form-status.success { color: var(--emerald); }
     .form-status.error { color: var(--crimson); }
     .socials-row { display: flex; justify-content: center; gap: 1.2rem; margin-top: 2.5rem; }
-    .soc { width: 52px; height: 52px; background: rgba(200,162,77,0.08); border: 1px solid var(--glass-border); border-radius: 2px; color: rgba(255,255,255,0.6); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; text-decoration: none; transition: all 0.25s; }
+    .soc { width: 52px; height: 52px; background: rgba(200,162,77,0.08); border: 1px solid var(--glass-border); border-radius: 2px; color: rgba(255,255,255,0.6); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; text-decoration: none; transition: all 0.25s; box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
     .soc:hover { background: var(--crimson); border-color: var(--crimson); color: white; transform: translateY(-4px); box-shadow: 0 6px 20px rgba(166,27,43,0.4); }
     footer { background: var(--emerald-dark); border-top: 1px solid var(--glass-border); padding: 2rem clamp(1.5rem,5vw,4rem); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     footer p { color: rgba(255,255,255,0.32); font-size: 0.8rem; letter-spacing: 1px; }
@@ -136,9 +134,9 @@
 <div class="scroll-bar" id="scrollBar"></div>
 <nav>
   <a href="#hero" class="nav-logo">
-    <img src="loidforger.png" alt="Loid Forger" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-    <div class="nav-logo-fallback" style="display:none">LF</div>
-    L<span>.</span>FORGER
+    <img src="yusuf.png" alt="ʏᴜꜱᴜꜰ•" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="nav-logo-fallback" style="display:none">Y</div>
+    YUSUF <span>TECH</span>
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -153,7 +151,7 @@
   <div class="hero-inner">
     <div>
       <div class="hero-tag"><i class="fas fa-circle"></i> Available for hire</div>
-      <h1 class="hero-name">Loid<em>Forger</em></h1>
+      <h1 class="hero-name">YUSUF<em>TECH</em></h1>
       <p class="hero-role">Frontend &middot; Backend &middot; Web3</p>
       <p class="hero-desc">Full-stack developer crafting clean interfaces and reliable systems. 50+ successful projects delivered with precision and speed.</p>
       <div class="hero-cta-row">
@@ -165,8 +163,8 @@
       <div class="stat-badge badge-top">5-Star Developer</div>
       <div class="hero-card-inner">
         <div class="hero-avatar-wrap">
-          <img src="loidforger.png" alt="Loid Forger" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:3px" onerror="this.style.display='none';document.getElementById('af').style.display='flex'">
-          <div class="avatar-fallback" id="af" style="display:none">LF</div>
+          <img src="yusuf.png" alt="ʏᴜꜱᴜꜰ•" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:3px" onerror="this.style.display='none';document.getElementById('af').style.display='flex'">
+          <div class="avatar-fallback" id="af" style="display:none">Y</div>
         </div>
         <div class="dossier-row"><span class="dossier-label">Status</span><span class="dossier-val">Active &mdash; 24h delivery</span></div>
         <div class="dossier-row"><span class="dossier-label">Rating</span><span class="dossier-val">5.0 / 5.0</span></div>
@@ -182,7 +180,7 @@
   <div class="section">
     <p class="section-label reveal">Intelligence File</p>
     <h2 class="reveal">About <span>Me</span></h2>
-    <p class="reveal" style="font-size:1.1rem;line-height:1.85;color:#444;margin-bottom:1.2rem;max-width:720px">I'm <strong>Loid Forger</strong>, a <strong>5-star rated full-stack developer</strong> specializing in <strong>frontend</strong>, <strong>backend</strong>, and <strong>Web3</strong>. 50+ clients brought to life through clean, professional websites and reliable systems.</p>
+    <p class="reveal" style="font-size:1.1rem;line-height:1.85;color:#444;margin-bottom:1.2rem;max-width:720px">I'm <strong>ʏᴜꜱᴜꜰ•</strong>, a <strong>5-star rated full-stack developer</strong> specializing in <strong>frontend</strong>, <strong>backend</strong>, and <strong>Web3</strong>. 50+ clients brought to life through clean, professional websites and reliable systems.</p>
     <p class="reveal" style="font-size:1.05rem;line-height:1.85;color:#555;max-width:720px">From responsive interfaces to blockchain integrations, I operate at the intersection of design and engineering. Always looking to <em>grow, improve, and build things that matter.</em></p>
   </div>
 </div>
@@ -219,27 +217,28 @@
   </div>
   <div class="testimonials-track-wrap">
     <div class="testimonials-track">
-      <div class="t-card"><p class="t-text">"Working with Loid was one of the best decisions for our project &mdash; he understood Web3 culture instantly."</p><div class="t-author">TaxEvasionTuna</div><div class="t-role">Core Team</div></div>
-      <div class="t-card"><p class="t-text">"We needed a site that felt serious but aligned with the memecoin space. Loid delivered exactly that."</p><div class="t-author">Dadacoin</div><div class="t-role">Founder</div></div>
-      <div class="t-card"><p class="t-text">"Optima-X required a modern presence. Loid built a site that communicates innovation perfectly."</p><div class="t-author">Optima-X</div><div class="t-role">Lead</div></div>
-      <div class="t-card"><p class="t-text">"Speed matters in Web3, and Loid moves fast without sacrificing quality. Highly recommended."</p><div class="t-author">WaveCoin</div><div class="t-role">Marketing</div></div>
-      <div class="t-card"><p class="t-text">"Most developers don't understand meme energy. Loid does &mdash; and he captures it perfectly."</p><div class="t-author">PumpCat</div><div class="t-role">Community Manager</div></div>
-      <div class="t-card"><p class="t-text">"SharedCoin needed clarity. Loid structured everything intuitively and made it look sharp."</p><div class="t-author">SharedCoin</div><div class="t-role">Co-Founder</div></div>
-      <div class="t-card"><p class="t-text">"Working with Loid was one of the best decisions for our project &mdash; he understood Web3 culture instantly."</p><div class="t-author">TaxEvasionTuna</div><div class="t-role">Core Team</div></div>
-      <div class="t-card"><p class="t-text">"We needed a site that felt serious but aligned with the memecoin space. Loid delivered exactly that."</p><div class="t-author">Dadacoin</div><div class="t-role">Founder</div></div>
-      <div class="t-card"><p class="t-text">"Optima-X required a modern presence. Loid built a site that communicates innovation perfectly."</p><div class="t-author">Optima-X</div><div class="t-role">Lead</div></div>
-      <div class="t-card"><p class="t-text">"Speed matters in Web3, and Loid moves fast without sacrificing quality. Highly recommended."</p><div class="t-author">WaveCoin</div><div class="t-role">Marketing</div></div>
-      <div class="t-card"><p class="t-text">"Most developers don't understand meme energy. Loid does &mdash; and he captures it perfectly."</p><div class="t-author">PumpCat</div><div class="t-role">Community Manager</div></div>
-      <div class="t-card"><p class="t-text">"SharedCoin needed clarity. Loid structured everything intuitively and made it look sharp."</p><div class="t-author">SharedCoin</div><div class="t-role">Co-Founder</div></div>
+      <div class="t-card"><p class="t-text">"Working with Yusuf was one of the best decisions for our project &mdash; he understood Web3 culture instantly."</p><div class="t-author">TaxEvasionTuna</div><div class="t-role">Core Team</div></div>
+      <div class="t-card"><p class="t-text">"We needed a site that felt serious but aligned with the memecoin space. Yusuf delivered exactly that."</p><div class="t-author">Dadacoin</div><div class="t-role">Founder</div></div>
+      <div class="t-card"><p class="t-text">"Optima-X required a modern presence. Yusuf built a site that communicates innovation perfectly."</p><div class="t-author">Optima-X</div><div class="t-role">Lead</div></div>
+      <div class="t-card"><p class="t-text">"Speed matters in Web3, and Yusuf moves fast without sacrificing quality. Highly recommended."</p><div class="t-author">WaveCoin</div><div class="t-role">Marketing</div></div>
+      <div class="t-card"><p class="t-text">"Most developers don't understand meme energy. Yusuf does &mdash; and he captures it perfectly."</p><div class="t-author">PumpCat</div><div class="t-role">Community Manager</div></div>
+      <div class="t-card"><p class="t-text">"SharedCoin needed clarity. Yusuf structured everything intuitively and made it look sharp."</p><div class="t-author">SharedCoin</div><div class="t-role">Co-Founder</div></div>
+      <div class="t-card"><p class="t-text">"Working with Yusuf was one of the best decisions for our project &mdash; he understood Web3 culture instantly."</p><div class="t-author">TaxEvasionTuna</div><div class="t-role">Core Team</div></div>
+      <div class="t-card"><p class="t-text">"We needed a site that felt serious but aligned with the memecoin space. Yusuf delivered exactly that."</p><div class="t-author">Dadacoin</div><div class="t-role">Founder</div></div>
+      <div class="t-card"><p class="t-text">"Optima-X required a modern presence. Yusuf built a site that communicates innovation perfectly."</p><div class="t-author">Optima-X</div><div class="t-role">Lead</div></div>
+      <div class="t-card"><p class="t-text">"Speed matters in Web3, and Yusuf moves fast without sacrificing quality. Highly recommended."</p><div class="t-author">WaveCoin</div><div class="t-role">Marketing</div></div>
+      <div class="t-card"><p class="t-text">"Most developers don't understand meme energy. Yusuf does &mdash; and he captures it perfectly."</p><div class="t-author">PumpCat</div><div class="t-role">Community Manager</div></div>
+      <div class="t-card"><p class="t-text">"SharedCoin needed clarity. Yusuf structured everything intuitively and made it look sharp."</p><div class="t-author">SharedCoin</div><div class="t-role">Co-Founder</div></div>
     </div>
   </div>
   <div class="section-dark-inner" style="text-align:center;padding-top:3rem;padding-bottom:1rem">
     <p class="section-label reveal" style="justify-content:center">Connect</p>
     <h3 class="reveal" style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:white;margin-bottom:0.5rem;font-weight:700">Find Me Online</h3>
     <div class="socials-row reveal">
-      <a href="https://x.com/X_LoidForger" target="_blank" class="soc" aria-label="X"><i class="fab fa-twitter"></i></a>
-      <a href="https://t.me/X_LoidForger" target="_blank" class="soc" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-      <a href="https://github.com/LoidForger-dev" target="_blank" class="soc" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://discord.gg/fTkcwHZx" target="_blank" class="soc" aria-label="Discord"><i class="fab fa-discord"></i></a>
+      <a href="https://x.com/YusufKing_0x7" target="_blank" class="soc" aria-label="X"><i class="fab fa-twitter"></i></a>
+      <a href="https://t.me/YusufKing_0x7" target="_blank" class="soc" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="https://github.com/YusufKing-dev" target="_blank" class="soc" aria-label="GitHub"><i class="fab fa-github"></i></a>
     </div>
   </div>
 </div>
@@ -282,10 +281,10 @@
 
 <footer>
   <span class="footer-brand">
-    <img src="loidforger.png" alt="Loid Forger" class="footer-logo-img" onerror="this.style.display='none'">
-    L. FORGER
+    <img src="yusuf.png" alt="ʏᴜꜱᴜꜰ•" class="footer-logo-img" onerror="this.style.display='none'">
+    YUSUF TECH
   </span>
-  <p>&copy; <span id="year"></span> Loid Forger. All rights reserved.</p>
+  <p>&copy; <span id="year"></span> YUSUF TECH. All rights reserved.</p>
   <p style="color:rgba(255,255,255,0.18);font-size:0.7rem;letter-spacing:1px">FULL-STACK &middot; WEB3 &middot; FRONTEND &middot; BACKEND</p>
 </footer>
 
@@ -314,7 +313,7 @@
     const tl=document.getElementById('telegramLink').value.trim();
     if(!pn||!tk||!ab||!xl){status.textContent='Please fill all required fields.';status.className='form-status error';return;}
     try{
-      const res=await fetch('https://formsubmit.co/ajax/IamMaverick4@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({_subject:'New Project: '+pn,_captcha:'false','Project Name':pn,Ticker:tk,About:ab,'X Link':xl,Telegram:tl||'Not provided'})});
+      const res=await fetch('https://formsubmit.co/ajax/IamMaverick4@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({_subject:'New Project: '+pn,_captcha:'false',_template:'table','Project Name':pn,Ticker:tk,About:ab,'X Link':xl,Telegram:tl||'Not provided'})});
       if(res.ok){status.textContent="Message sent! I'll reply soon.";status.className='form-status success';form.reset();}
       else throw new Error();
     }catch{status.textContent='Failed. Email IamMaverick4@gmail.com directly.';status.className='form-status error';}
